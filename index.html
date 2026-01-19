@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visuals & Motion Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="noise-overlay"></div>
+    <div class="liquid-wrapper">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <div class="pattern-overlay"></div>
+
+    <nav>
+        <div class="logo">drrll.json</div>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="#posters">Design</a>
+                <a href="#motion">Motion</a>
+                <a href="#cinematic">Cinematic</a>
+                <!-- <a href="mailto:email@me.com">Contact</a> -->
+            </div>
+            <button id="soundBtn" class="sound-btn" onclick="toggleSound()">
+                <span class="sound-icon">♪</span>
+                <span>Sound Off</span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero-area" data-theme="light">
+        <div class="float-bubble bubble-1"><video autoplay muted loop playsinline><source src="assets/videos/hero/hero1.mp4" type="video/mp4"></video></div>
+        <div class="float-bubble bubble-2"><img src="assets/images/posters/vectoooor.jpg" alt="Poster"></div>
+        <div class="float-bubble bubble-3"><video autoplay muted loop playsinline><source src="assets/videos/hero/hero2.mp4" type="video/mp4"></video></div>
+        <div class="float-bubble bubble-4"><video autoplay muted loop playsinline><source src="assets/videos/hero/hero3.mp4" type="video/mp4"></video></div>
+
+        <h1>
+            <span class="title-line">Portofolio</span><br>
+            <span class="title-line outline-text">Adalahpookoknya</span><br>
+            <span class="title-line">bingung mo ngapain</span>
+        </h1>
+    </section>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-bar">
+            <div class="marquee-content">
+                <span class="marquee-item">Design Archive <span class="star-icon">✦</span></span>
+                <span class="marquee-item">Typography <span class="star-icon">✦</span></span>
+                <span class="marquee-item">Print Design <span class="star-icon">✦</span></span>
+                <span class="marquee-item">Design Archive <span class="star-icon">✦</span></span>
+                <span class="marquee-item">Typography <span class="star-icon">✦</span></span>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-container" id="posters" data-theme="light">
+        <div class="section-header reveal">
+            <div class="header-title"><h2>DESIGN<br>ARCHIVE</h2><span>(001 — Swipe)</span></div>
+            <div class="carousel-nav">
+                <button class="nav-btn prev-btn" onclick="scrollCarousel('poster-track', -340)">←</button>
+                <button class="nav-btn next-btn" onclick="scrollCarousel('poster-track', 340)">→</button>
+            </div>
+        </div>
+        
+        <div class="carousel-track" id="poster-track">
+            <div class="poster-item reveal" onclick="openModal('assets/images/posters/Floradanfauna.jpg', 'image', 'Flora dan Fauna', 'disuruh ikut lomba poster yauda begini hasilnya.')">
+                <div class="poster-frame"><img src="assets/images/posters/Floradanfauna.jpg" alt="Poster"></div>
+                <div class="item-info"><h3>Flora dan Fauna</h3><p>Posters</p></div>
+            </div>
+            
+            <div class="poster-item reveal" onclick="openModal('assets/images/posters/TKJ.jpg', 'image', 'XII TKJ BUTTON', 'awalnya disuruh buat logo buat kelas, eh kepikiran tombol keyboard ywda begini, tpi aneh ywda ga dipake😁.')">
+                <div class="poster-frame"><img src="assets/images/posters/TKJ.jpg" alt="Poster"></div>
+                <div class="item-info"><h3>Logo TKJ</h3><p>Graphics</p></div>
+            </div>
+
+            <div class="poster-item reveal" onclick="openModal('assets/images/posters/cipher.jpg', 'image', 'Secret Cipher', 'adalah pokoknya')">
+                <div class="poster-frame"><img src="assets/images/posters/cipher.jpg" alt="Poster"></div>
+                <div class="item-info"><h3>Secret cipher</h3><p>Manipulation</p></div>
+            </div>
+            
+            <div class="poster-item reveal" onclick="openModal('assets/images/posters/kir.jpg', 'image', 'Jacket Design', 'dulu pernah disurh design jacket buat ekskul, trus ywda gitu')">
+                <div class="poster-frame"><img src="assets/images/posters/kir.jpg" alt="Poster"></div>
+                <div class="item-info"><h3>Jacket Design</h3><p>Mockup</p></div>
+            </div>
+                        <div class="poster-item reveal" onclick="openModal('assets/images/posters/PPDB.jpg', 'image', 'Poster PPDB', 'jadi gini, disruruh buat poster ppdb, trus ywda begini hasilnya.')">
+                <div class="poster-frame"><img src="assets/images/posters/PPDB.jpg" alt="Poster"></div>
+                <div class="item-info"><h3>Poster PPDB</h3><p>Posters</p></div>
+            </div>
+                        <div class="poster-item reveal" onclick="openModal('assets/images/posters/DG.jpg', 'image', 'LOGO Desain Grafis', 'jadi ginii, dulu ada tugas ekskul desain grafis, trus disuruh buat logo, ywda begini hasilnya.')">
+                <div class="poster-frame"><img src="assets/images/posters/DG.jpg" alt="Poster"></div>
+                <div class="item-info"><h3>LOGO Desain Grafis</h3><p>logo</p></div>
+            </div>
+                        <div class="poster-item reveal" onclick="openModal('assets/images/posters/rmadhan.jpg', 'image', 'Poster Ramadhan', 'jadi gini, ada tugas osis disurh buat poster ramadhan, trus ywda begini hasilnya.')">
+                <div class="poster-frame"><img src="assets/images/posters/rmadhan.jpg" alt="Poster"></div>
+                <div class="item-info"><h3>Poster Ramadhan</h3><p>Posters</p></div>
+            </div>
+                        <div class="poster-item reveal" onclick="openModal('assets/images/posters/isramiraj.jpg', 'image', 'Poster Isra Miraj', 'jadi gini, ada tugas osis disurh buat poster Isra Miraj, trus ywda begini hasilnya.')">
+                <div class="poster-frame"><img src="assets/images/posters/isramiraj.jpg" alt="Poster"></div>
+                <div class="item-info"><h3>Poster Isra Miraj</h3><p>Posters</p></div>
+            </div>
+                                    <div class="poster-item reveal" onclick="openModal('assets/images/posters/POMTNI.jpg', 'image', 'Poster POM TNI', 'jadi gini, ada tugas osis disurh buat poster POM TNI, trus ywda begini hasilnya.')">
+                <div class="poster-frame"><img src="assets/images/posters/POMTNI.jpg" alt="Poster"></div>
+                <div class="item-info"><h3>Poster Ramadhan</h3><p>Posters</p></div>
+            </div>
+                                    <div class="poster-item reveal" onclick="openModal('assets/images/posters/hariradio.jpg', 'image', 'Poster Hari Radio', 'jadi gini, ada tugas osis disurh buat poster hari radio, trus ywda begini hasilnya.')">
+                <div class="poster-frame"><img src="assets/images/posters/hariradio.jpg" alt="Poster"></div>
+                <div class="item-info"><h3>Poster Hari Radio</h3><p>Posters</p></div>
+            </div>
+                                    <div class="poster-item reveal" onclick="openModal('assets/images/posters/harifoto.jpg', 'image', 'Poster Fotografi', 'jadi gini, ada tugas osis disurh buat poster fotografi, trus ywda begini hasilnya.')">
+                <div class="poster-frame"><img src="assets/images/posters/harifoto.jpg" alt="Poster"></div>
+                <div class="item-info"><h3>Poster Fotografi</h3><p>Posters</p></div>
+            </div>
+                                    <div class="poster-item reveal" onclick="openModal('assets/images/posters/XITKJ1.png', 'image', 'LOGO KELAS', 'jadi gini, gw dulu buat logo kelas yang style nya tuh balon balon begini ywda begini dehasilnya.')">
+                <div class="poster-frame"><img src="assets/images/posters/XITKJ1.png" alt="Poster"></div>
+                <div class="item-info"><h3>LOGO KELAS</h3><p>Graphics</p></div>
+            </div>
+                                    <div class="poster-item reveal" onclick="openModal('assets/images/posters/thumbnail.jpg', 'image', 'Thumbnail Youtube', 'jadi gini, dulu gua aktif di youtube, trus gw buat thumbnail ini ywda begini dehasilnya.')">
+                <div class="poster-frame"><img src="assets/images/posters/thumbnail.jpg" alt="Poster"></div>
+                <div class="item-info"><h3>Thumbnail Youtube</h3><p>Graphics</p></div>
+            </div>
+                                    <div class="poster-item reveal" onclick="openModal('assets/images/posters/wallpaperdesktop.jpg', 'image', 'Walpaper valorant', 'jadi gini, gw suka main valorant, trus gw buat wallpaper desktop ini ywda begini dehasilnya.')">
+                <div class="poster-frame"><img src="assets/images/posters/wallpaperdesktop.jpg" alt="Poster"></div>
+                <div class="item-info"><h3>Walpaper valorant</h3><p>Graphics</p></div>
+            </div>
+            <div class="poster-item reveal" onclick="openModal('assets/images/posters/TugasAkhirDesain.jpg', 'image', 'Vector Pangersa Abah Anom', 'jadi gini, dulu gua ada tugas akhir desain grafis, trus gw dan kelompok gw diminta buat vector pangersa abah anom ini ywda begini dehasilnya.')">
+                <div class="poster-frame"><img src="assets/images/posters/TugasAkhirDesain.jpg" alt="Poster"></div>
+                <div class="item-info"><h3>Vector Pangersa Abah Anom</h3><p>Art</p></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-bar">
+            <div class="marquee-content">
+                <span class="marquee-item">Motion Graphics <span class="star-icon">✦</span></span>
+                <span class="marquee-item">Kinetic Energy <span class="star-icon">✦</span></span>
+                <span class="marquee-item">Motion Graphics <span class="star-icon">✦</span></span>
+                <span class="marquee-item">Kinetic Energy <span class="star-icon">✦</span></span>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-container" id="motion" data-theme="dark">
+        <div class="section-header reveal">
+            <div class="header-title"><h2>MOTION<br>GALLERY</h2><span>(002 — Play)</span></div>
+            <div class="carousel-nav">
+                <button class="nav-btn prev-btn" onclick="scrollCarousel('motion-track', -520)">←</button>
+                <button class="nav-btn next-btn" onclick="scrollCarousel('motion-track', 520)">→</button>
+            </div>
+        </div>
+
+        <div class="carousel-track" id="motion-track">
+            <div class="motion-item reveal" onclick="openModal('assets/videos/kinetic/murasaki.mp4', 'video', 'Vector animation', 'gabut bikin vector animation pake after effect pas liburan')">
+                <div class="motion-frame"><video autoplay muted loop playsinline><source src="assets/videos/kinetic/murasaki.mp4" type="video/mp4"></video></div>
+                <div class="motion-info"><h3>Vector Animation 1</h3><span class="motion-tags">#After Effect #3D #MoGraph</span></div>
+            </div>
+            <div class="motion-item reveal" onclick="openModal('assets/videos/kinetic/alamak.mp4', 'video', 'Kinetic Typhography 1', 'wkkwkw kaku bat jieerrr, editan pertama pake AE btw')">
+                <div class="motion-frame"><video autoplay muted loop playsinline><source src="assets/videos/kinetic/alamak.mp4" type="video/mp4"></video></div>
+                <div class="motion-info"><h3>Kinetic Typhography 1</h3><span class="motion-tags">#After Effect #MoGraph</span></div>
+            </div>
+            <div class="motion-item reveal" onclick="openModal('assets/videos/kinetic/monalisa.mp4', 'video', 'Kinetic Typhography 2', 'dulu teman gua request buatin pake lagu tenage moona lisa wkwkkw, kaku bat bejirr wkafiwfhauwfhnwaug')">
+                <div class="motion-frame"><video autoplay muted loop playsinline><source src="assets/videos/kinetic/monalisa.mp4" type="video/mp4"></video></div>
+                <div class="motion-info"><h3>Kinetic Typhography 2</h3><span class="motion-tags">#After Effect #MoGraph</span></div>
+            </div>
+
+            <div class="motion-item reveal" onclick="openModal('assets/videos/kinetic/insekur.mp4', 'video', 'Kinetic Typhography 3', 'dulu gua di tantang ama kaka kelas gua buat nge remake editan orang, bagus lah ya ini mah mendingan')">
+                <div class="motion-frame"><video autoplay muted loop playsinline><source src="assets/videos/kinetic/insekur.mp4" type="video/mp4"></video></div>
+                <div class="motion-info"><h3>Kinetic Typhography 3</h3><span class="motion-tags">#After Effect #MoGraph</span></div>
+            </div>
+                        <div class="motion-item reveal" onclick="openModal('assets/videos/kinetic/decemberlomjadi.mp4', 'video', 'December', 'kwkwkw lom jadi dari dulu')">
+                <div class="motion-frame"><video autoplay muted loop playsinline><source src="assets/videos/kinetic/decemberlomjadi.mp4" type="video/mp4"></video></div>
+                <div class="motion-info"><h3>December</h3><span class="motion-tags">#After Effect #MoGraph</span></div>
+            </div>
+                        <div class="motion-item reveal" onclick="openModal('assets/videos/kinetic/gtw.mp4', 'video', 'Sumpa gatau lagu apa', 'latihan mograph')">
+                <div class="motion-frame"><video autoplay muted loop playsinline><source src="assets/videos/kinetic/gtw.mp4" type="video/mp4"></video></div>
+                <div class="motion-info"><h3>Latihan Mograhp</h3><span class="motion-tags">#After Effect #MoGraph</span></div>
+            </div>
+                        <div class="motion-item reveal" onclick="openModal('assets/videos/kinetic/saturn.mp4', 'video', 'saturn MoGraph', 'eumm belom di lanjutin sih')">
+                <div class="motion-frame"><video autoplay muted loop playsinline><source src="assets/videos/kinetic/saturn.mp4" type="video/mp4"></video></div>
+                <div class="motion-info"><h3>saturn MoGraph</h3><span class="motion-tags">#After Effect #MoGraph</span></div>
+            </div>
+                        <div class="motion-item reveal" onclick="openModal('assets/videos/kinetic/ifthesun.mp4', 'video', 'Tracking Typhography 1', 'wkkwkw kurang clip jadinya gadilanjutin')">
+                <div class="motion-frame"><video autoplay muted loop playsinline><source src="assets/videos/kinetic/ifthesun.mp4" type="video/mp4"></video></div>
+                <div class="motion-info"><h3>Tracking Typhography 1</h3><span class="motion-tags">#After Effect #3D #MoGraph</span></div>
+            </div>
+                        <div class="motion-item reveal" onclick="openModal('assets/videos/kinetic/GEMA.mp4', 'video', 'Tracking Typhography 2', 'Dunia pasti ada akhirnya...')">
+                <div class="motion-frame"><video autoplay muted loop playsinline><source src="assets/videos/kinetic/GEMA.mp4" type="video/mp4"></video></div>
+                <div class="motion-info"><h3>Tracking Typhography 2</h3><span class="motion-tags">#After Effect #3D #MoGraph</span></div>
+            </div>
+                        <div class="motion-item reveal" onclick="openModal('assets/videos/kinetic/Keyboard.mp4', 'video', 'Iklan Keyboard', 'pokoknya dulu ada tugas kewirausahaan buat iklan produk, trus gw pilih keyboard begini dehasilnya.')">
+                <div class="motion-frame"><video autoplay muted loop playsinline><source src="assets/videos/kinetic/Keyboard.mp4" type="video/mp4"></video></div>
+                <div class="motion-info"><h3>iklan keyboard</h3><span class="motion-tags">#After Effect #3D #MoGraph</span></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-bar">
+            <div class="marquee-content">
+                <span class="marquee-item">Cinematic Experience <span class="star-icon">✦</span></span>
+                <span class="marquee-item">Wide Angle <span class="star-icon">✦</span></span>
+                <span class="marquee-item">Cinematic Experience <span class="star-icon">✦</span></span>
+                <span class="marquee-item">Wide Angle <span class="star-icon">✦</span></span>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-container" id="cinematic" data-theme="dark">
+        <div class="section-header reveal">
+            <h2>CINEMATIC<br>FRAMES</h2><span>(003 — 21:9)</span>
+        </div>
+        <div class="cinematic-list">
+            <div class="cinematic-item reveal">
+                <div class="cinematic-card" onclick="openModal('assets/videos/cinematic/SMES1.mp4', 'video', 'Memories', 'disuruh buat video pendek tentang kenangan semasa smester satu jadi agit wkwkkw')">
+                    <video autoplay muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"><source src="assets/videos/cinematic/SMES1.mp4" type="video/mp4"></video>
+                </div>
+                <div class="cinematic-content"><h3>Memories</h3><p>8x8=6x4</p><span class="cine-tag">#AfterEffect</span></div>
+            </div>
+
+            <div class="cinematic-item reveal">
+                <div class="cinematic-card" onclick="openModal('assets/videos/cinematic/flow1.mp4', 'video', 'Flow edit', 'nyoba doang jir masih jelek wkwk')">
+                    <video autoplay muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"><source src="assets/videos/cinematic/flow1.mp4" type="video/mp4"></video>
+                </div>
+                <div class="cinematic-content"><h3>Flow edit 1</h3><p>malem malem dianter pulang naek motor</p><span class="cine-tag">Documentary</span></div>
+            </div>
+        </div>
+    </section>
+
+        <section class="section-container" id="cinematic" data-theme="dark">
+        <div class="section-header reveal">
+            <h2>GAMEPLAY<br>EDIT</h2><span>(003 — 21:9)</span>
+        </div>
+        <div class="cinematic-list">
+            <div class="cinematic-item reveal">
+                <div class="cinematic-card" onclick="openModal('assets/videos/gameplay/isthere.mp4', 'video', 'Is there someone else?', 'editan pertama buat montage valorant, lumayan lah yaa wkwk')">
+                    <video autoplay muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"><source src="assets/videos/gameplay/isthere.mp4" type="video/mp4"></video>
+                </div>
+                <div class="cinematic-content"><h3>Is there someone else?</h3><p>ini adalah ya itulah pokoknya</p><span class="cine-tag">#AfterEffect</span></div>
+            </div>
+
+            <div class="cinematic-item reveal">
+                <div class="cinematic-card" onclick="openModal('assets/videos/gameplay/hope.mp4', 'video', 'Hope Undertale OST', 'editan kedua buat montage valorant, disini gua belajar velocity sama beat syncing wkwk')">
+                    <video autoplay muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"><source src="assets/videos/gameplay/hope.mp4" type="video/mp4"></video>
+                </div>
+                <div class="cinematic-content"><h3>Hope Undertale OST</h3><p>ini adalah ya itulah pokoknya</p><span class="cine-tag">#AfterEffect</span></div>
+            </div>
+
+            <div class="cinematic-item reveal">
+                <div class="cinematic-card" onclick="openModal('assets/videos/gameplay/yugetaswimpulfulopliquitenudaven.mp4', 'video', 'Swimmming Pool - Lloyd', 'editan ketiga buat montage valorant, diajak collab sama temen kampus')">
+                    <video autoplay muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"><source src="assets/videos/gameplay/yugetaswimpulfulopliquitenudaven.mp4" type="video/mp4"></video>
+                </div>
+                <div class="cinematic-content"><h3>Swimmming Pool edit</h3><p>ini adalah ya itulah pokoknya</p><span class="cine-tag">#AfterEffect</span></div>
+            </div>
+
+            <div class="cinematic-item reveal">
+                <div class="cinematic-card" onclick="openModal('assets/videos/gameplay/lopminot.mp4', 'video', 'Love me not', 'editan keempat buat montage valorant, disini gua belajar color grading ala ala cinematik gitu. collab lagi sama temen kampus')">
+                    <video autoplay muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"><source src="assets/videos/gameplay/lopminot.mp4" type="video/mp4"></video>
+                </div>
+                <div class="cinematic-content"><h3>Love me not edit</h3><p>ini adalah ya itulah pokoknya</p><span class="cine-tag">#AfterEffect</span></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>LET'S MAKE MAGIC.</h2>
+        <!-- <a href="#" class="btn-cta">Start a Project</a> -->
+    </footer>
+
+    <div class="modal-overlay" id="projectModal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-media" id="modalMediaContainer">
+                </div>
+            <div class="zoom-controls">
+                <button class="zoom-btn" onclick="zoomIn()">+</button>
+                <button class="zoom-btn" onclick="resetZoom()">⟲</button>
+                <button class="zoom-btn" onclick="zoomOut()">−</button>
+            </div>
+            <div class="modal-info">
+                <div class="modal-text"><h3 id="modalTitle">Title</h3><p id="modalDesc">Desc</p></div>
+                <button class="modal-close" onclick="closeModal()">✕</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
